@@ -1,13 +1,1 @@
-<section id="vacancies">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Our Vacancies</h2>
-                <hr class="primary">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <?=$vacancies->details?>
-    </div>
-</section>
+<section id="vacancies">    <div class="container">        <div class="row">            <div class="col-lg-12 text-center">                <h2 class="section-heading">Our Vacancies</h2>                <hr class="primary">            </div>        </div>    </div>    <div class="container">        <div class="row">            <?php            if ($vacancies) {                foreach ($vacancies as $i => $vc) {                    ?>                    <div class="col-lg-3 col-md-6 text-center">                        <div class="service-box fix-box-height">                            <h3><b><?= $vc->title ?></b></h3>                            <p class="text-muted"><?= $vc->intro ?></p>                            <a href="#" data-toggle="modal" data-target="#myModal<?= $vc->id ?>">read more ...</a>                        </div>                    </div>                    <div class="modal fade" id="myModal<?= $vc->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">                        <div class="modal-dialog" role="document">                            <div class="modal-content">                                <div class="modal-header text-center">                                    <h5 class="modal-title"><b><?= $vc->title ?></b></h5>                                </div>                                <div class="modal-body">                                    <?= $vc->details ?>                                </div>                                <div class="modal-footer">                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                </div>                            </div>                        </div>                    </div>                    <?php                }            }//$vacancies->details             ?>        </div></section>

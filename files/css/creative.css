@@ -486,3 +486,6 @@ header .header-content .header-content-inner:hover{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+.fix-box-height{
+    height: 200px;
+}

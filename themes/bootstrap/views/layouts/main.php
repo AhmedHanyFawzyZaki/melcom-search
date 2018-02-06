@@ -148,8 +148,14 @@
                     </li>
                     <li>
                         <a href="<?= Yii::app()->request->baseUrl ?>/page">
-                            <i class="icon-list"></i>
+                            <i class="icon-pencil"></i>
                             <?= Yii::t('translate', 'Pages') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?= Yii::app()->request->baseUrl ?>/vacancy">
+                            <i class="icon-list"></i>
+                            <?= Yii::t('translate', 'Vacancies') ?>
                         </a>
                     </li>
                     <li>
